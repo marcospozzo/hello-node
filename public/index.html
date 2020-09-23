@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <title>Hello Node</title>
+  </head>
+
+  <body>
+    <div class="leftPanel">
+      <div class="submitPanel">
+        <div class="submitItems">
+          <h1>Hello Node!</h1>
+          <button id="getLocationButton" onclick="getLocation()">
+            Show you current location on the map
+          </button>
+          <input id="name" placeholder="Enter your name" />
+          <button onclick="sendLocation()">
+            Submit your location to our database
+          </button>
+          <p>
+            Latitude: <span id="latitude">-</span>
+            <br />
+            Longitude: <span id="longitude">-</span>
+          </p>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="dataPanel">
+        <span id="database"></span>
+      </div>
+    </div>
+
+    <div id="mapid"></div>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+  </body>
+  <script src="scripts.js"></script>
+</html>
